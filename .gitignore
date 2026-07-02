@@ -1,0 +1,12 @@
+# Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env.local
+
+# Laravel(上書き用ファイルのみ管理。実プロジェクト側は別)
+backend/vendor/
+backend/.env
+
+# OS
+.DS_Store
