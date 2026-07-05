@@ -55,7 +55,7 @@ ul { list-style: none; }
   font-size: 1.5rem; letter-spacing: 0.12em;
   color: var(--green-dark); display: flex; align-items: center; gap: 8px;
 }
-.logo .leaf { width: 22px; height: 22px; }
+.logo .leaf { width: 40px; height: 40px; }
 .nav { display: flex; gap: 26px; align-items: center; }
 .nav a {
   font-size: 0.9rem; color: var(--text); position: relative; padding: 4px 0;
