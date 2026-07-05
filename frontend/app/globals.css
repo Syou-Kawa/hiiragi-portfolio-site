@@ -332,7 +332,7 @@ body { position: relative; }
 }
 .bloom-flower {
   position: absolute; width: var(--size); height: var(--size);
-  /* 文字と重なっても文字色が透けて読めるようにする */
+  /* セクションの背景色の上でも色が自然になじむようにする */
   mix-blend-mode: multiply;
   opacity: 0;
 }
@@ -352,10 +352,11 @@ body { position: relative; }
   0%, 100% { transform: translateY(0) rotate(0deg); }
   50%      { transform: translateY(-8px) rotate(3deg); }
 }
-/* カードなどの面要素は花レイヤー(z-index:1)より手前に置き、
-   花と重なったときは花がカードの後ろに隠れるようにする */
-.work-card, .price-card, .contact-card, .flow-steps li, .cta-band,
-.profile-img, .hero-icon, .sns-icons a, .admin-form, .admin-list-item, .dropzone {
+/* ページの中身(見出し・文章・ボタン・カードなど)はすべて花レイヤー(z-index:1)より
+   手前に置き、花と重なったときは必ず花が下(背景側)になるようにする。
+   セクションの背景色の上には花を見せたいので、背景を持つセクション自体ではなく
+   背景が透明な中身のラッパー側を持ち上げる */
+.hero > :not(.hero-deco), .page-head > *, .section .container, .footer > * {
   position: relative; z-index: 2;
 }
 /* 花びらが中心から1枚ずつひらく */
